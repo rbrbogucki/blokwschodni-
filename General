@@ -1,18 +1,35 @@
-Clenchedfist is an early stage, open source, retro style racing game engine, written in blitz3d. 0.1 version features:
-Visual:     
-    -low polycount, NFS 6 graphic style,
-    -dynamic shadows,
-    -static lightning,
-    -bumpmapping,
-    -animated skybox,
-    -reflections,
-    -pfx, fog, blur,
+Early stage, retro style racing game written in blitz3d. Features:
+
+0.1:
+Visual:
+ -low polycount, NFS 6 style models
 Mechanics:
-    Arcade driving style with implemented:
-        -acceleration, velocity,
-        -frond/rear wheel drive,
-        -air resistance, braking, weight transfer
-        -slip ratio, traction force,
-        -low, high speed turning
-        -all variables placed in script file, regardless from the engine code
+ -acceleration, velocity
+ -low/high speed turning
+ -breaking
+ 
+0.2
+ Visual:     
+ -dynamic shadows(cars),
+ -static lightning, 
+ Mechanics:
+ -slip ratio, traction force,
         
+0.3
+ Visual: 
+ -animated skybox,
+ -reflections,
+ Mechanics:
+ -weight transfer
+
+0.4
+ Visual: 
+ -pfx, fog, blur,
+ Mechanics:
+ -frond/rear wheel drive,
+ 
+0.5
+ Visual: 
+  -bumpmapping,
+ Mechanics:
+  -all variables placed in script file, regardless from the engine code
