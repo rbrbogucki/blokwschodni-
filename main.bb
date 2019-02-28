@@ -1,4 +1,3 @@
-;unfinished and fckn messy
 Const level=1
 Const body=2
 Const wheel=3
@@ -38,16 +37,19 @@ PositionEntity cbody,0,springheight,0
 EntityType cbody,body
 
 ;-------kola-----------------
-cFLwheel=LoadMesh("kolo.b3d")
+cFLwheel=LoadMesh("kolo.b3d",cbody)
 PositionEntity cFLwheel,5,0,0
-cFRwheel=LoadMesh("kolo.b3d")
+cFRwheel=LoadMesh("kolo.b3d",cbody)
 PositionEntity cFRwheel,-5,0,0
-cRLwheel=LoadMesh("kolo.b3d")
+cRLwheel=LoadMesh("kolo.b3d",cbody)
 PositionEntity cRLwheel,1,0,2
-cRRwheel=LoadMesh("kolo.b3d")
+cRRwheel=LoadMesh("kolo.b3d",cbody)
 PositionEntity cRRwheel,-1,0,2
 
-EntityParent cbody,cflwheel
+
+
+
+
 
 EntityType cFLwheel,wheel
 EntityType cFRwheel,wheel
@@ -63,10 +65,10 @@ EntityType cRRwheel,wheel
 While Not KeyDown(1)
 
 
-MoveEntity cFLwheel,0,-0.01,0
-MoveEntity cFRwheel,0,-0.01,0
-MoveEntity cRLwheel,0,-0.01,0
-MoveEntity cRRwheel,0,-0.01,0
+MoveEntity cFLwheel,0,-1,0
+MoveEntity cFRwheel,0,-1,0
+MoveEntity cRLwheel,0,-1,0
+MoveEntity cRRwheel,0,-1,0
 
 	If KeyDown(30) TurnEntity cam,0,+0.5,0	;cursors to move
 	If KeyDown(32) TurnEntity cam,0,-0.5,0
@@ -76,7 +78,9 @@ MoveEntity cRRwheel,0,-0.01,0
 	If KeyDown(45) MoveEntity cam,0,0,-1	;A - fly foward
 	If KeyDown(44) MoveEntity cam,0,0,1		;Z - fly backward
 
-If KeyDown(200) MoveEntity cflwheel,0,0,1
+If KeyDown(200) MoveEntity cbody,0,0,1
+If KeyDown(208) MoveEntity cbody,0,0,-1
+
 
 	UpdateWorld
 	RenderWorld
