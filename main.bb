@@ -36,6 +36,8 @@ cbody=LoadMesh("body.b3d")
 PositionEntity cbody,0,springheight,0
 EntityType cbody,body
 
+
+
 ;-------kola-----------------
 cFLwheel=LoadMesh("kolo.b3d",cbody)
 PositionEntity cFLwheel,5,0,0
@@ -46,15 +48,12 @@ PositionEntity cRLwheel,1,0,2
 cRRwheel=LoadMesh("kolo.b3d",cbody)
 PositionEntity cRRwheel,-1,0,2
 
-
-
-
-
-
 EntityType cFLwheel,wheel
 EntityType cFRwheel,wheel
 EntityType cRLwheel,wheel
 EntityType cRRwheel,wheel
+
+
 
 
 
@@ -65,10 +64,10 @@ EntityType cRRwheel,wheel
 While Not KeyDown(1)
 
 
-MoveEntity cFLwheel,0,-1,0
-MoveEntity cFRwheel,0,-1,0
-MoveEntity cRLwheel,0,-1,0
-MoveEntity cRRwheel,0,-1,0
+MoveEntity cFLwheel,0,-0.5,0
+MoveEntity cFRwheel,0,-0.5,0
+MoveEntity cRLwheel,0,-0.5,0
+MoveEntity cRRwheel,0,-0.5,0
 
 	If KeyDown(30) TurnEntity cam,0,+0.5,0	;cursors to move
 	If KeyDown(32) TurnEntity cam,0,-0.5,0
